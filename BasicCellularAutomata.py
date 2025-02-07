@@ -40,7 +40,8 @@ def calculateLine(numLines, numChars):
                 topLineChunk = "".join(topLine[i-1 : i+2])
                 underLine[i] = ruleXor(topLineChunk)
         print("".join(underLine)) 
-        topLine = underLine[:]   
+        #Splice Operator is used to avoid passing list by reference
+        topLine = underLine[:]
     
     
 calculateLine(numLines, numChars)
